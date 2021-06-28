@@ -43,7 +43,7 @@ func main() {
     g.Go(func() error {
         select {
         case <-ctx.Done():
-            log.Println("errgroup exit...")
+            log.Println("week2 exit...")
         case <-serverOut:
             log.Println("server will out...")
         }
@@ -68,5 +68,5 @@ func main() {
         }
     })
 
-    fmt.Printf("errgroup exiting: %+v\n", g.Wait())
+    fmt.Printf("week2 exiting: %+v\n", g.Wait())
 }
